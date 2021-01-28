@@ -1,5 +1,6 @@
 console.log('prueba');
 
+console.log(dataEnFormatoJson);
 
 
 class Datos {
@@ -15,11 +16,15 @@ class Datos {
         this.superficie = superficie;
         this.color = color;
         this.precio1litro = precio1litro;
+        this.litrosDePintura = 0;
     }
 
-    litrosDePintura() {
-        console.log('Usted necesita ' + this.metros / 10 * this.superficie * this.color + ' litros de pintura')
+    calcularLitrosDePintura() {
+        this.litrosDePintura = + this.metros / 10 * this.superficie * this.color;
+        console.log('Usted necesita ' + this.litrosDePintura + ' litros de pintura');
+
     }
+
     precioDePintura() {
         if (this.litrosDePintura < 3) {
             return ('El costo de la Pintura a comprar es  de ' +
@@ -27,13 +32,10 @@ class Datos {
         } else if (this.litrosDePintura > 3 && this.litrosDePintura < 20) {
             return ('El costo de la Pintura a comprar es  de ' +
                 this.metros / 10 * this.superficie * this.color * this.precio1litro * 0.6 + ' $');
-        } else(this.litrosDePintura >= 20); {
+        } else if (this.litrosDePintura >= 20){
             return ('El costo de la Pintura a comprar es  de ' +
                 this.metros / 10 * this.superficie * this.color * this.precio1litro * 0.4 + ' $');
         }
-
-
-
 
     }
 
@@ -41,15 +43,15 @@ class Datos {
 
 
 let cotizacion1 = new Datos(200, 1, 2, 560)
-cotizacion1.litrosDePintura();
+cotizacion1.calcularLitrosDePintura();
 console.log(cotizacion1.precioDePintura());
 
 let cotizacion2 = new Datos(300, 1.4, 1, 560);
-cotizacion2.litrosDePintura();
+cotizacion2.calcularLitrosDePintura();
 console.log(cotizacion2.precioDePintura());
 
 let cotizacion3 = new Datos(25, 1.2, 3, 640);
-cotizacion3.litrosDePintura();
+cotizacion3.calcularLitrosDePintura();
 console.log(cotizacion3.precioDePintura());
 
 //crear titulo y subtitulo desde el DOM
@@ -78,6 +80,5 @@ function datoMetrosIngresados() {
     ingresaMetros = 100;
     console.log(ingresaMetros)
     localStorage.setItem('remosMetros', ingresaMetros);
-
 
 }
