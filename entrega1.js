@@ -81,3 +81,19 @@ function datoMetrosIngresados() {
 
 
 }
+
+
+function onBtnClick() {
+    alert("BTN");
+
+}
+
+function onBlur() {
+    console.log('se ejecuta el blur')
+
+}
+
+function onInput(event) {
+    console.log(event.target.value)
+
+}
