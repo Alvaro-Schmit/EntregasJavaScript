@@ -98,5 +98,7 @@ const key = document.getElementById("info");
 function onInput(datosQueIngreso) {
     key.textContent = datosQueIngreso.target.value;
     console.log(datosQueIngreso.target.value);
+    localStorage.setItem('datosLocalStorage', key.textContent);
+
 
 }
