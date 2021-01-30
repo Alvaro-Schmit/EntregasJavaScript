@@ -83,22 +83,14 @@ function datoMetrosIngresados() {
 }
 
 
-function onBtnClick() {
-    alert("BTN");
 
-}
-
-function onBlur() {
-    console.log('se ejecuta el blur');
-
-}
 const key = document.getElementById("info");
 
 
 function onInput(datosQueIngreso) {
     key.textContent = datosQueIngreso.target.value;
     console.log(datosQueIngreso.target.value);
-    localStorage.setItem('datosLocalStorage', key.textContent);
+    localStorage.setItem('remosMetros', key.textContent);
 
 
 }
