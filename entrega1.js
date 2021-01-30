@@ -90,7 +90,7 @@ const key = document.getElementById("info");
 function onInput(datosQueIngreso) {
     key.textContent = datosQueIngreso.target.value;
     console.log(datosQueIngreso.target.value);
-    localStorage.setItem('remosMetros', key.textContent);
+    localStorage.setItem('dataLocalStorage', key.textContent);
 
 
 }
