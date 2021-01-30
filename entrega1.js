@@ -20,7 +20,7 @@ class Datos {
     }
 
     calcularLitrosDePintura() {
-        this.litrosDePintura = + this.metros / 10 * this.superficie * this.color;
+        this.litrosDePintura = +this.metros / 10 * this.superficie * this.color;
         console.log('Usted necesita ' + this.litrosDePintura + ' litros de pintura');
 
     }
@@ -32,7 +32,7 @@ class Datos {
         } else if (this.litrosDePintura > 3 && this.litrosDePintura < 20) {
             return ('El costo de la Pintura a comprar es  de ' +
                 this.metros / 10 * this.superficie * this.color * this.precio1litro * 0.6 + ' $');
-        } else if (this.litrosDePintura >= 20){
+        } else if (this.litrosDePintura >= 20) {
             return ('El costo de la Pintura a comprar es  de ' +
                 this.metros / 10 * this.superficie * this.color * this.precio1litro * 0.4 + ' $');
         }
@@ -78,7 +78,7 @@ let ingresaMetros = 0;
 const key = document.getElementById("info");
 
 
-<<<<<<< HEAD
+
 
 function onInput(datosQueIngreso) {
 
@@ -93,6 +93,3 @@ window.addEventListener('load', function(datosQueIngreso) {
     keysearch.addEventListener('input', onInput);
 
 })
-=======
-}
->>>>>>> 0234c51e063c88e65036b90d8cddca176c83f193
