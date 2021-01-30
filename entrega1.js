@@ -89,11 +89,14 @@ function onBtnClick() {
 }
 
 function onBlur() {
-    console.log('se ejecuta el blur')
+    console.log('se ejecuta el blur');
 
 }
+const key = document.getElementById("info");
 
-function onInput(event) {
-    console.log(event.target.value)
+
+function onInput(datosQueIngreso) {
+    key.textContent = datosQueIngreso.target.value;
+    console.log(datosQueIngreso.target.value);
 
 }

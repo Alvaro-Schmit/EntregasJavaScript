@@ -23,6 +23,11 @@
     align-items: flex-start;
 }
 
-button {
+button,
+input {
+    margin-bottom: 10px;
+}
+
+h4 {
     margin-bottom: 10px;
 }
