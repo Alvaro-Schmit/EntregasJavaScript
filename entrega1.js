@@ -83,15 +83,7 @@ function datoMetrosIngresados() {
 }
 
 
-function onBtnClick() {
-    alert("BTN");
 
-}
-
-function onBlur() {
-    console.log('se ejecuta el blur');
-
-}
 const key = document.getElementById("info");
 
 
