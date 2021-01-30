@@ -31,3 +31,11 @@ input {
 h4 {
     margin-bottom: 10px;
 }
+
+#datoEnPantalla {
+    border: solid 2px blue;
+    width: auto;
+    height: auto;
+    max-width: 35%;
+    min-height: 50px;
+}

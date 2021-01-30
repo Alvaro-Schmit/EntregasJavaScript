@@ -73,16 +73,20 @@ subtituloCotizar.style.textAlign = 'center';
 
 let ingresaMetros = 0;
 
-
-
-
-
 const key = document.getElementById("info");
 
 
+
 function onInput(datosQueIngreso) {
+
     key.textContent = datosQueIngreso.target.value;
     console.log(datosQueIngreso.target.value);
     localStorage.setItem('datosLocalStorage', key.textContent);
 
 }
+
+window.addEventListener('load', function(datosQueIngreso) {
+    const keysearch = document.getElementById('keysearch01');
+    keysearch.addEventListener('input', onInput);
+
+})
