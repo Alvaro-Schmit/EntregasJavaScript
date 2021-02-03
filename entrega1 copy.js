@@ -3,24 +3,26 @@ function crearTitulo() {
     let title = document.createElement('h1')
     title.textContent = 'Bienvenido';
     tituloSubtitulo.appendChild(title);
-}
 
-function subtitulo() {
     let subtituloCotizar = document.createElement('h2');
     subtituloCotizar.textContent = 'Utiliza esta plantilla para cotizar tu trabajo';
     tituloSubtitulo.appendChild(subtituloCotizar);
 
     title.style.textAlign = 'center';
     subtituloCotizar.style.textAlign = 'center';
+
 }
+window.addEventListener('load', function() {
+    crearTitulo();
+})
+
 //crear targetas desde el DOM
 
-function builContainer() {
-    const divflexContainerBody = document.createElement('div');
 
-}
 
 function buildSection() {
+
+
     const flexItemBody = document.createElement('div');
 
     const h4questionData = document.createElement('h4');
@@ -37,16 +39,21 @@ function buildSection() {
 
     flexItemBody.appendChild(h4questionData);
 
+
     return flexItemBody;
 
 }
 
 
 window.addEventListener('load', function() {
+    const flexContainerBodyjs = document.getElementById('flexContainerBody');
 
-    console.log(pageStructure);
-    pageStructure.forEach(pageStructure); {
+    pageStructure.forEach(function(pageStructureElement) {
         const card = buildSection();
-    }
+        console.log(card);
+        flexContainerBodyjs.childElementCount(buildSection);
+
+
+    })
 
 })
