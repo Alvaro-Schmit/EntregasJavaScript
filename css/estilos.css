@@ -31,3 +31,8 @@ input {
 h4 {
     margin-bottom: 10px;
 }
+
+.parrafo p {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
