@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
 
     pageStructure.forEach(function(product) {
         const card = buildSection(product);
-        console.log(card);
+
         flexContainerBodyjs.appendChild(card);
 
 
