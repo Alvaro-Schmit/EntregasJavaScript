@@ -65,7 +65,8 @@ window.addEventListener('load', function() {
     pageStructure.forEach(function(product) {
         const card = buildSection(product);
 
-        flexContainerBodyjs.innerHTML += card;
+        flexContainerBodyjs.innerHTML += card; //importante colocar += para poder crear mas de una targeta
+
 
 
     })
