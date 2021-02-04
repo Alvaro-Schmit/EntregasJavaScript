@@ -24,21 +24,27 @@ function buildSection() {
 
 
     const flexItemBody = document.createElement('div');
+    flexItemBody.classList.add("flexItemBody");
 
     const h4questionData = document.createElement('h4');
     h4questionData.textContent = 'aqui va la pregunta';
 
     const inputData = document.createElement('input');
+    inputData.classList.add('input');
 
     const image = document.createElement('img');
+    image.src = "https://placeimg.com/280/80/meters";
 
     const divparrafo = document.createElement('div');
     const pEspecificacion = document.createElement('p');
     pEspecificacion.textContent = 'aqui va la especificacion de la pregunta pabajo de la imagen y centrada con espcio equilibrado'
-
+    pEspecificacion.classList.add("descripcion");
+    divparrafo.appendChild(pEspecificacion);
 
     flexItemBody.appendChild(h4questionData);
-
+    flexItemBody.appendChild(inputData);
+    flexItemBody.appendChild(image);
+    flexItemBody.appendChild(divparrafo);
 
     return flexItemBody;
 
@@ -46,12 +52,12 @@ function buildSection() {
 
 
 window.addEventListener('load', function() {
-    const flexContainerBodyjs = document.getElementById('flexContainerBody');
+    const flexContainerBodyjs = document.getElementById('flexContainerBody02');
 
-    pageStructure.forEach(function(pageStructureElement) {
+    pageStructure.forEach(function(cratedcard) {
         const card = buildSection();
         console.log(card);
-        flexContainerBodyjs.childElementCount(buildSection);
+        flexContainerBodyjs.appendChild(card);
 
 
     })

@@ -17,6 +17,26 @@ const pageStructure = [{
         "img": src = "https://placeimg.com/280/80/Texture",
         "input": `<input type="text" name="firtsName" id="keysearch01" />`,
         "especificaciones": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, numquam quos architecto vitae, repudiandae ex earum molliti'
+    },
+    {
+        "pregunta": "Ingresa los metros a pintar",
+        "img": src = "https://placeimg.com/280/80/Texture",
+        "input": `<input type="text" name="firtsName" id="keysearch01" />`,
+        "especificaciones": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, numquam quos architecto vitae, repudiandae ex earum molliti'
+    },
+
+    {
+        "pregunta": "Ingresa los metros a pintar",
+        "img": src = "https://placeimg.com/280/80/Texture",
+        "input": `<input type="text" name="firtsName" id="keysearch01" />`,
+        "especificaciones": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, numquam quos architecto vitae, repudiandae ex earum molliti'
+    },
+
+    {
+        "pregunta": "Ingresa los metros a pintar",
+        "img": src = "https://placeimg.com/280/80/Texture",
+        "input": `<input type="text" name="firtsName" id="keysearch01" />`,
+        "especificaciones": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, numquam quos architecto vitae, repudiandae ex earum molliti'
     }
 ]
 
