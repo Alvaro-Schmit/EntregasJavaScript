@@ -22,31 +22,39 @@ window.addEventListener('load', function() {
 
 function buildSection(product) {
 
+    const htmlcard = `<div class="flexItemBody" id="item6">
+                          <h4>${product.pregunta}</h4>
+                          <input type="text" name="firtsName" id="keysearch06" />
+                          <img src=${product.img} alt="">
+                          <p class="descripcion">${product.especificaciones}</p>
+                     </div>
+`
 
-    const flexItemBody = document.createElement('div');
-    flexItemBody.classList.add("flexItemBody");
+    // const flexItemBody = document.createElement('div');
+    // flexItemBody.classList.add("flexItemBody");
 
-    const h4questionData = document.createElement('h4');
-    h4questionData.textContent = product.pregunta;
+    // const h4questionData = document.createElement('h4');
+    // h4questionData.textContent = product.pregunta;
 
-    const inputData = document.createElement('input');
-    inputData.classList.add('input');
+    // const inputData = document.createElement('input');
+    // inputData.classList.add('input');
 
-    const image = document.createElement('img');
-    image.src = product.img;
+    // const image = document.createElement('img');
+    // image.src = product.img;
 
-    const divparrafo = document.createElement('div');
-    const pEspecificacion = document.createElement('p');
-    pEspecificacion.textContent = product.especificaciones;
-    pEspecificacion.classList.add("descripcion");
-    divparrafo.appendChild(pEspecificacion);
+    // const divparrafo = document.createElement('div');
+    // const pEspecificacion = document.createElement('p');
+    // pEspecificacion.textContent = product.especificaciones;
+    // pEspecificacion.classList.add("descripcion");
+    // divparrafo.appendChild(pEspecificacion);
 
-    flexItemBody.appendChild(h4questionData);
-    flexItemBody.appendChild(inputData);
-    flexItemBody.appendChild(image);
-    flexItemBody.appendChild(divparrafo);
+    // flexItemBody.appendChild(h4questionData);
+    // flexItemBody.appendChild(inputData);
+    // flexItemBody.appendChild(image);
+    // flexItemBody.appendChild(divparrafo);
 
-    return flexItemBody;
+    // return flexItemBody;
+    return htmlcard;
 
 }
 
@@ -57,7 +65,7 @@ window.addEventListener('load', function() {
     pageStructure.forEach(function(product) {
         const card = buildSection(product);
 
-        flexContainerBodyjs.appendChild(card);
+        flexContainerBodyjs.innerHTML += card;
 
 
     })
