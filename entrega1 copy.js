@@ -20,24 +20,24 @@ window.addEventListener('load', function() {
 
 
 
-function buildSection() {
+function buildSection(product) {
 
 
     const flexItemBody = document.createElement('div');
     flexItemBody.classList.add("flexItemBody");
 
     const h4questionData = document.createElement('h4');
-    h4questionData.textContent = 'aqui va la pregunta';
+    h4questionData.textContent = product.pregunta;
 
     const inputData = document.createElement('input');
     inputData.classList.add('input');
 
     const image = document.createElement('img');
-    image.src = "https://placeimg.com/280/80/meters";
+    image.src = product.img;
 
     const divparrafo = document.createElement('div');
     const pEspecificacion = document.createElement('p');
-    pEspecificacion.textContent = 'aqui va la especificacion de la pregunta pabajo de la imagen y centrada con espcio equilibrado'
+    pEspecificacion.textContent = product.especificaciones;
     pEspecificacion.classList.add("descripcion");
     divparrafo.appendChild(pEspecificacion);
 
@@ -54,8 +54,8 @@ function buildSection() {
 window.addEventListener('load', function() {
     const flexContainerBodyjs = document.getElementById('flexContainerBody02');
 
-    pageStructure.forEach(function(cratedcard) {
-        const card = buildSection();
+    pageStructure.forEach(function(product) {
+        const card = buildSection(product);
         console.log(card);
         flexContainerBodyjs.appendChild(card);
 
