@@ -1,3 +1,20 @@
+let tituloSubtitulo = document.getElementById('encabezado');
+let title = document.createElement('h1')
+title.textContent = 'Bienvenido';
+tituloSubtitulo.appendChild(title);
+
+
+let subtituloCotizar = document.createElement('h2');
+subtituloCotizar.textContent = 'Utiliza esta plantilla para cotizar tu trabajo';
+tituloSubtitulo.appendChild(subtituloCotizar);
+
+title.style.textAlign = 'center';
+
+
+subtituloCotizar.style.textAlign = 'center';
+
+
+
 //DATA01
 const key01 = document.getElementById("info01");
 
@@ -90,12 +107,12 @@ function onInput(colorAAplicarIntensidad) {
     return colorAAplicarIntensidad;
 }
 
-// window.addEventListener('load', function(colorAAplicarIntensidad) {
+window.addEventListener('load', function(colorAAplicarIntensidad) {
+    const keysearch06 = document.getElementById('keysearch06');
+    keysearch06.addEventListener('input', onInput);
+})
+
+// $(window).load(function(colorAAplicarIntensidad) {
 //     const keysearch06 = document.getElementById('keysearch06');
 //     keysearch06.addEventListener('input', onInput);
 // })
-
-$(window).load(function(colorAAplicarIntensidad) {
-    const keysearch06 = document.getElementById('keysearch06');
-    keysearch06.addEventListener('input', onInput);
-});
