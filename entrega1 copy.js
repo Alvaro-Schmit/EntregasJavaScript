@@ -34,7 +34,10 @@ function buildSection(product) {
     inputData.classList.add('input');
     inputData.setAttribute("type", "text[]");
     inputData.setAttribute("data-id", product.id);
+
     console.log(inputData.value);
+
+
 
 
 
@@ -108,3 +111,17 @@ window.addEventListener('load', function() {
         crearTitulo();
     })
     //////////////////////////////////////////
+
+function onInput(datosQueIngreso) {
+    key.textContent = datosQueIngreso.target.value;
+    console.log(key.textContent);
+    localStorage.setItem('datosLocalStorage', key.textContent);
+
+}
+
+
+window.addEventListener('load', function(datosQueIngreso) {
+    const keysearch = document.querySelectorAll('.input');
+    keysearch.addEventListener('input', onInput);
+
+})
