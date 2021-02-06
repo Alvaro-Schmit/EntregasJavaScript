@@ -1,51 +1,49 @@
 //crear targetas desde el DOM
 
-
 class DOMBuild {
-    constructor() {
-
-    }
+    //metodo que crea un tag h4 y le agrega texto.
     h4(preguntaClass) {
         const h4 = document.createElement('h4');
         h4.textContent = preguntaClass;
-
         return h4;
     }
 
-
-
+    //metodo que crea un tag img y le agrega el src.
     img(imgClass) {
         const imgConst = document.createElement('img');
         imgConst.src = imgClass;
         return imgConst;
     }
+
+    //metodo que crea un tag input:text ye le asigna el id que recive por parametro.
+    inputText(id) {
+        const inputData = document.createElement('input');
+        inputData.classList.add('input');
+        inputData.setAttribute("type", "text[]");
+        inputData.setAttribute("data-id", id);
+        return inputData;
+    }
+
+    //metodo que crea un parrafo con especificaciones.
+    divParrafo(especificaciones) {
+        const divparrafo = document.createElement('div');
+        const pEspecificacion = document.createElement('p');
+        pEspecificacion.textContent = especificaciones;
+        pEspecificacion.classList.add("descripcion");
+        divparrafo.appendChild(pEspecificacion);
+        return divparrafo;
+    }
 }
 
-////////
-
 function buildSection(product) {
-
 
     const flexItemBody = document.createElement('div');
     flexItemBody.classList.add("flexItemBody");
 
     const h4questionData = dombuilder.h4(product.pregunta);
-    const inputData = document.createElement('input');
-    inputData.classList.add('input');
-    inputData.setAttribute("type", "text[]");
-    inputData.setAttribute("data-id", product.id);
-
-
-
-
+    const inputData = dombuilder.inputText(product.id);
     const image = dombuilder.img(product.img);
-
-
-    const divparrafo = document.createElement('div');
-    const pEspecificacion = document.createElement('p');
-    pEspecificacion.textContent = product.especificaciones;
-    pEspecificacion.classList.add("descripcion");
-    divparrafo.appendChild(pEspecificacion);
+    const divparrafo = dombuilder.divParrafo(product.especificaciones);
 
     flexItemBody.appendChild(h4questionData);
     flexItemBody.appendChild(inputData);
@@ -53,13 +51,8 @@ function buildSection(product) {
     flexItemBody.appendChild(divparrafo);
 
     return flexItemBody;
-
 }
 
-
-
-const dombuilder = new DOMBuild();
-console.log(dombuilder);
 
 function onselectclick(event) {
     console.log(event.target.value);
@@ -67,19 +60,15 @@ function onselectclick(event) {
 
 window.addEventListener('load', function() {
     const flexContainerBodyjs = document.getElementById('flexContainerBody02');
-    const dombuilder = new DOMBuild();
-    console.log(dombuilder);
 
     pageStructure.forEach(function(product) {
         const card = buildSection(product);
 
         flexContainerBodyjs.appendChild(card);
-
-
     })
+
     const inputDataUser = document.querySelectorAll('.input');
     inputDataUser.forEach(function(inputDataUserfunc) {
-
         console.log(inputDataUserfunc);
     })
 
@@ -104,6 +93,6 @@ function crearTitulo() {
 
 }
 window.addEventListener('load', function() {
-        crearTitulo();
-    })
+    crearTitulo();
+})
     //////////////////////////////////////////
