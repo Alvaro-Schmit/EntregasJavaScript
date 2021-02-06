@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrega.1</title>
     <link rel="stylesheet" href="./css/estilos.css">
-    <script defer src="./datosCotiz.js"></script>
-    <script defer src="./entrega1.js"></script>
+    <script defer src="./general.js"></script>
     <script defer src="./datos.js"></script>
+    <script defer src="./eventos.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 </head>
 
 <body>
@@ -23,27 +25,27 @@
         </div>
         <div class="flexItemBody" id="item1">
             <h4>Indica la textura de superficie</h4>
-            <input type="text" name="firtsName" oninput="onInput(event)" />
+            <input type="text" name="firtsName" id="keysearch02" />
             <img src="https://placeimg.com/280/140/Texture" alt="">
         </div>
         <div class="flexItemBody" id="item2">
             <h4>Indica el color actual de la superficie</h4>
-            <input type="text" name="firtsName" oninput="onInput(event)" />
+            <input type="text" name="firtsName" id="keysearch03" />
             <img src="https://placeimg.com/280/140/colors" alt="">
         </div>
         <div class="flexItemBody" id="item3">
             <h4>Indica el color a pintar</h4>
-            <input type="text" name="firtsName" oninput="onInput(event)" />
+            <input type="text" name="firtsName" id="keysearch04" />
             <img src="https://placeimg.com/280/140/architecture" alt="">
         </div>
         <div class="flexItemBody" id="item4">
             <h4>Ingresa el estado de la superficie</h4>
-            <input type="text" name="firtsName" oninput="onInput(event)" />
+            <input type="text" name="firtsName" id="keysearch05" />
             <img src="https://placeimg.com/280/140/Contruction" alt="">
         </div>
         <div class="flexItemBody" id="item6">
             <h4>ingresa el costo de la mano de obra x metro.</h4>
-            <input type="text" name="firtsName" oninput="onInput(event)" />
+            <input type="text" name="firtsName" id="keysearch06" />
 
             <img src="https://placeimg.com/280/140/peint" alt="">
         </div>
@@ -51,34 +53,29 @@
     <br>
     <br>
     <br>
-    <div id="datoEnPantalla">
-        <h3 id="info"></h3>
+    <div class="datoEnPantalla">
+        <h3 id="info01"></h3>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <fieldset>
-        <legend>input</legend>
-        <input type="text" name="keysearch1" id="info" />
-    </fieldset>
-
-
-    <br>
-    <br>
-    <br>
-    <fieldset>
-        <legend>input</legend>
-        <input type="text" name="keysearch1" id="keysearch" />
-    </fieldset>
+    <div class="datoEnPantalla">
+        <h3 id="info02"></h3>
+    </div>
+    <div class="datoEnPantalla">
+        <h3 id="info03"></h3>
+    </div>
+    <div class="datoEnPantalla">
+        <h3 id="info04"></h3>
+    </div>
+    <div class="datoEnPantalla">
+        <h3 id="info05"></h3>
+    </div>
+    <div class="datoEnPantalla">
+        <h3 id="info06"></h3>
+    </div>
 
     <br>
+    <hr>
     <br>
     <br>
-
-
-    <br>
-
 </body>
 
 </html>
