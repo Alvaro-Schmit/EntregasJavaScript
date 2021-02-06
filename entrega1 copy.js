@@ -15,23 +15,10 @@ class DOMBuild {
 
 
     img(imgClass) {
-            const imgConst = document.createElement('img');
-            imgConst.src = imgClass;
-            return imgConst;
-        }
-        //     divparrafo(divparrafo) {
-        //         const divparrafo = document.createElement('div');
-
-    // }
-    // parr(parrafo) {
-    //     const pEspecificacion = document.createElement('p');
-    //     pEspecificacion.textContent = parrafo;
-    //     return pEspecificacion;
-
-    // }
-
-
-
+        const imgConst = document.createElement('img');
+        imgConst.src = imgClass;
+        return imgConst;
+    }
 }
 
 ////////
@@ -44,6 +31,13 @@ function buildSection(product) {
 
     const h4questionData = dombuilder.h4(product.pregunta);
     const inputData = document.createElement('input');
+    inputData.classList.add('input');
+    inputData.setAttribute("type", "text[]");
+    inputData.setAttribute("data-id", product.id);
+
+
+
+
     const image = dombuilder.img(product.img);
 
 
@@ -61,11 +55,15 @@ function buildSection(product) {
     return flexItemBody;
 
 }
+
+
+
 const dombuilder = new DOMBuild();
 console.log(dombuilder);
 
-
-
+function onselectclick(event) {
+    console.log(event.target.value);
+}
 
 window.addEventListener('load', function() {
     const flexContainerBodyjs = document.getElementById('flexContainerBody02');
@@ -79,5 +77,33 @@ window.addEventListener('load', function() {
 
 
     })
+    const inputDataUser = document.querySelectorAll('.input');
+    inputDataUser.forEach(function(inputDataUserfunc) {
+
+        console.log(inputDataUserfunc);
+    })
 
 })
+
+
+
+
+//////////   TITULO Y SUBTITULO   ///////
+function crearTitulo() {
+    let tituloSubtitulo = document.getElementById('encabezado');
+    let title = document.createElement('h1')
+    title.textContent = 'Bienvenido';
+    tituloSubtitulo.appendChild(title);
+
+    let subtituloCotizar = document.createElement('h2');
+    subtituloCotizar.textContent = 'Utiliza esta plantilla para cotizar tu trabajo';
+    tituloSubtitulo.appendChild(subtituloCotizar);
+
+    title.style.textAlign = 'center';
+    subtituloCotizar.style.textAlign = 'center';
+
+}
+window.addEventListener('load', function() {
+        crearTitulo();
+    })
+    //////////////////////////////////////////
