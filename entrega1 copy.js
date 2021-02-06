@@ -34,6 +34,7 @@ function buildSection(product) {
     inputData.classList.add('input');
     inputData.setAttribute("type", "text[]");
     inputData.setAttribute("data-id", product.id);
+    console.log(inputData.value);
 
 
 
